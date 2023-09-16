@@ -1,7 +1,6 @@
 import SubscribersCount from "./_components/subscribers-count";
 
 const Home = async () => {
-  let subscriberCount: number = 0;
   const apiKey = process.env.NEXT_PUBLIC_YT_API_KEY;
   const channelId = process.env.NEXT_PUBLIC_YT_CHANNEL_ID;
 
@@ -11,8 +10,18 @@ const Home = async () => {
 
   const ytSubCountAPIData: any = await ytSubCountAPI.json();
 
+  // const ytStatusAPI = await fetch(
+  //   `https://www.googleapis.com/youtube/v3/channels?part=liveStream&id=${channelId}&key=${apiKey}`
+  // );
+
+  // const ytStatusAPIData: any = await ytStatusAPI.json();
+
+  // console.log("ytStatusAPIData >>> ", ytStatusAPIData.error.errors);
+
   return (
-    <SubscribersCount channelInfo={ytSubCountAPIData.items[0].statistics} />
+    <SubscribersCount
+      channelInfoInitial={ytSubCountAPIData.items[0].statistics}
+    />
   );
 };
 
