@@ -85,7 +85,7 @@ const SubscribersCount = ({ channelInfoInitial }: Props) => {
     setPageBackgroundColor("#000000");
     setPageTextColor("#ffffff");
     setPageStaticText("SUB GOAL");
-    setSubGoalText(100);
+    setSubGoalText(200);
   };
 
   return (
