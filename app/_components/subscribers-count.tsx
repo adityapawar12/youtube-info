@@ -36,7 +36,7 @@ const SubscribersCount = ({ channelInfoInitial }: Props) => {
     useState<string>("#000000");
   const [pageTextColor, setPageTextColor] = useState<string>("#ffffff");
   const [pageStaticText, setPageStaticText] = useState<string>("SUB GOAL");
-  const [subGoalText, setSubGoalText] = useState<number>(200);
+  const [subGoalText, setSubGoalText] = useState<number>(300);
 
   useEffect(() => {
     const getSubCount = async () => {
